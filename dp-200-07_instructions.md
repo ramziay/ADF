@@ -202,7 +202,7 @@ The main tasks for this exercise are as follows:
     > NOTE: Data Flow clusters take 5-7 minutes to warm up.
 ### Task 2: Adding a Data Source
 
-1. **Add an ADLS source** Double click on the Mapping Data Flow object in the canvas. Click on the Add Source button in the Data Flow canvas. In the **Source dataset** dropdown, select your **ADLSG2** dataset used in your Copy activity
+1. **Add an ADLS source** Double click on the Mapping Data Flow object in the canvas. Under Settings TAB, Click new for DataFlow DropDown. In the **Source dataset** dropdown, select your **ADLSG2** dataset used in your Copy activity
 
     ![Adding a Source to a Mapping Data Flow in Azure Data Factory](Linked_Image_Files/M07-E03-T02-img01.png)
 
@@ -283,7 +283,7 @@ At this point, You have finished building your 8 transformation Mapping Data Flo
 
 ## Task 5: Running the Pipeline
 
-1. Go to the pipeline1 tab in the canvas. Because Azure Synapse Analytics in Data Flow uses [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide?view=sql-server-2017), you must specify a blob or ADLS staging folder. In the Execute Data Flow activity's settings tab, open up the PolyBase accordion and select your ADLS linked service and specify a staging folder path.
+1. Go to the pipeline1 tab in the canvas. Because Azure Synapse Analytics in Data Flow uses [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide?view=sql-server-2017), you must specify a blob or ADLS staging folder. In the Execute Data Flow activity's settings tab, open up the Staging accordion and select your ADLS linked service and specify a staging folder path.
 
     ![PolyBase configuration in Azure Data Factory](Linked_Image_Files/M07-E03-T05-img01.png)
 
@@ -315,11 +315,11 @@ The main tasks for this exercise are as follows:
 
 ### Task 1: Generate a Databricks Access Token.
 
-1. In the Azure portal, click on **Resource groups** and then click on **awrgstudxx**, and then click on **awdbwsstudxx** where xx are the initials of your name.
+1. In the Azure portal, click on **Resource groups** and then click on **awrgstudxx**, and then click on **awdbwsstudxx** where xx are the initials of your name. (Create A DataBricks Workspace in Azure using default settings, under Databrciks, after creation, Launch Workspace, and create a base cluster from the left menu)
 
 1. Click on **Launch Workspace**
 
-1. Click the user **profile icon** in the upper right corner of your Databricks workspace.
+1. Click the user's **Email** in the upper right corner of your Databricks workspace.
 
 1. Click **User Settings**.
 
@@ -355,9 +355,9 @@ The main tasks for this exercise are as follows:
 
 1. In Microsoft Edge, click on the tab for the portal In the Azure portal, and return to Azure Data Factory.
 
-1. In the **xx-data-factory** screen, click on **Author & Monitor**. Another tab opens up to author an Azure Data Factory solution.
+1. In the **xx-data-factory** screen, click on **Open Azure DataFactory Studio**. Another tab opens up to author an Azure Data Factory solution.
 
-1. On the left hand side of the screen, click on the **Author** icon. This opens up the Data Factory designer.
+1. On the left hand side of the screen, click on **Manage** from the left Menu. This opens up the Data Factory designer.
 
 1. At the bottom of the screen, click on **Connections**, and then click on **+ New**.
 
