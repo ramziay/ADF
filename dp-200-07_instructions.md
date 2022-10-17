@@ -67,7 +67,7 @@ Create your data factory: Use the [Azure Portal](https://portal.azure.com) to cr
     - **Subscription**: Your subscription
     - **Resource group**: awrgstudxx
     - **Location**: select the location closest to you
-    - **Enable GIT**: unchecked
+    - **Enable GIT**: Check Set Up Git Later
     - Leave other options to their default settings
 
         ![Creating Azure Data Factory in the Azure Portal](Linked_Image_Files/M07-E01-T01-img01.png)
@@ -96,7 +96,7 @@ The main tasks for this exercise are as follows:
 
 1. On the deployment successful message, click on the button **Go to resource**.
 
-1. In the xx-data-factory screen, in the middle of the screen, click on the button, **Author & Monitor**
+1. In the xx-data-factory screen, in the middle of the screen, click **Open Azure Data Factory Studio**
 
 1. **Open the authoring canvas** If coming from the ADF homepage, click on the **pencil icon** on the left sidebar or the **create pipeline button** to open the authoring canvas.
 
@@ -152,7 +152,7 @@ The main tasks for this exercise are as follows:
 
 1. Click on **Create**
 
-1. Once you have configured your linked service, you enter the set properties blade. As you are writing to this dataset, you want to point the folder where you want moviesDB.csv copied to. In the example below, I am writing to folder **output** in the file system **data**. While the folder can be dynamically created, the file system must exist prior to writing to it. Set **First row as header** to be true. You can either Import schema from **sample file** (use the moviesDB.csv file from **Labfiles\Starter\DP-200.7\SampleFiles**)  
+1. Once you have configured your linked service, you enter the set properties blade. As you are writing to this dataset, you want to point the folder where you want moviesDB.csv copied to. In the example below, I am writing to folder **output** in the file system **data**. While the folder can be dynamically created, the file system must exist prior to writing to it. Set **First row as header** to be true. You can either Import schema from **sample file** (use the moviesDB.csv file from **SampleFiles**)  
 
    ![Setting properties of a Sink in Azure Data Factory in the Azure Portal](Linked_Image_Files/M07-E02-T03-img02.png)
 
@@ -193,14 +193,13 @@ The main tasks for this exercise are as follows:
 
 ### Task 1: Preparing the environment
 
-1. **Turn on Data Flow Debug** Turn the **Data Flow Debug** slider located at the top of the authoring module on. 
-
-    > NOTE: Data Flow clusters take 5-7 minutes to warm up.
-
 1. **Add a Data Flow activity** In the Activities pane, open the Move and Transform accordion and drag the **Data Flow** activity onto the pipeline canvas. In the blade that pops up, click **Create new Data Flow** and select **Mapping Data Flow** and then click **OK**. Click on the  **pipeline1** tab and drag the green box from your Copy activity to the Data Flow Activity to create an on success condition. You will see the following in the canvass:
 
     ![Adding a Mapping Data Flow in Azure Data Factory](Linked_Image_Files/M07-E03-T01-img01.png)
+    
+1. **Turn on Data Flow Debug** Turn the **Data Flow Debug** slider located at the top of the authoring module on. 
 
+    > NOTE: Data Flow clusters take 5-7 minutes to warm up.
 ### Task 2: Adding a Data Source
 
 1. **Add an ADLS source** Double click on the Mapping Data Flow object in the canvas. Click on the Add Source button in the Data Flow canvas. In the **Source dataset** dropdown, select your **ADLSG2** dataset used in your Copy activity
